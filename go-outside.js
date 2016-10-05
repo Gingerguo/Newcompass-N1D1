@@ -7,6 +7,8 @@ if(raining){
 
 if(cold){
   console.log('Make sure you pick a scarf!');
+} else {
+  console.log('Short sleeves are fine.');
 }
 
 console.log('Now you are ready to go outside');
