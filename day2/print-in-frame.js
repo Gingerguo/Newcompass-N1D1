@@ -1,13 +1,13 @@
 function printInFrame(list) {
   var list = list.split(' ');
-  console.log(list);
+
   var longest = longestStr(list).length;
 
-  var border = repeat('*', longest);
+  var border = repeat('*', longest + 3);
 
   console.log(border);
   for (word of list) {
-    console.log('* ' + word + repeat(' ', longest - word.length + 1) + '*');
+    console.log('* ' + word + repeat(' ', longest - word.length) + '*');
   }
   console.log(border);
 }
@@ -23,8 +23,7 @@ function repeat(str, times) {
 }
 
 function longestStr(list) {
-
-  var longest = Math.max(...list);
+  var longest = list.sort(function (a , b) { return b.length - a.length;})[0];
   return longest;
 }
 
